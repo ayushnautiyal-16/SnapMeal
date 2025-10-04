@@ -2,7 +2,8 @@
   "dependencies": {
     "@parcel/transformer-js": "^2.15.4",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
     "parcel": "^2.15.4"
