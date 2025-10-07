@@ -24,6 +24,8 @@ const Header = () => {
                     <li><Link to="/about">About us</Link></li>
                     <li>
                         <Link to="/contact">contact us</Link>
+                    </li><li>
+                    <Link to="/grocery"> Grocery</Link>
                     </li>
                     <li>cart</li>
                     <button className='Login' onClick={() => {
@@ -35,5 +37,4 @@ const Header = () => {
         </div>
     );
 };
-
 export default Header
