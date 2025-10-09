@@ -5,29 +5,31 @@ import { Link } from 'react-router-dom';
 import useOnlineStatus from '../utils/useOnlineStatus';
 const Header = () => {
     const [btnNameReact, setBtnNameReact] = useState("Login");
-    const onlineStatus =useOnlineStatus();
+    const onlineStatus = useOnlineStatus();
     let btnName = "Login";
     return (
-        <div className="header">
+        <div className="flex justify-between bg-pink-100 shadow-lg mb-">
             <div className="Logo-container">
                 <img
-                    className="Logo"
+                    className="w-56"
                     src={LOGO_URL}
                 />
             </div>
-            <div className="nav-items">
-                <ul>
-                    <li>
-                        online status : {onlineStatus ?"✅":"🛑"};
+            <div className="flex items-center">
+                <ul className='flex p-4 m-4'>
+                    <li className='px-4'>
+                        online status : {onlineStatus ? "✅": "🛑"}
                     </li>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About us</Link></li>
-                    <li>
+                    <li className='px-4'><Link to="/">Home</Link></li>
+                    <li className='px-4'><Link to="/about">About us</Link></li>
+                    <li className='px-4'>
                         <Link to="/contact">contact us</Link>
-                    </li><li>
-                    <Link to="/grocery"> Grocery</Link>
                     </li>
-                    <li>cart</li>
+                    <li className='px-4'>
+                        <Link to="/grocery"> Grocery</Link>
+                    </li>
+                    <li className='px-4'>cart
+                    </li>
                     <button className='Login' onClick={() => {
                         btnNameReact == "Login" ? setBtnNameReact("Logout") : setBtnNameReact("Login");
                     }}>{btnNameReact}
